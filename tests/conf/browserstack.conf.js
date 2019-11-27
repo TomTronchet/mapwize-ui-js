@@ -25,7 +25,8 @@ exports.config = {
   commonCapabilities: {
     'browserstack.local': true,
     'browserstack.networkLogs': true,
-    'browserstack.console': 'errors',
+    'browserstack.console': 'verbose',
+    'browserstack.debug': true,
     'project': 'mapwize-ui-js',
     // 'browserstack.debug': true
   },
