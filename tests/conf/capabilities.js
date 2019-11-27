@@ -7,5 +7,5 @@ module.exports = {
     'browser_version': '11.0',
     'browserName': 'Windows 8.1 - IE 11.0',
     'browserstack.selenium_version': '3.141.59'
-  }
-]
+  }]
+}
