@@ -41,7 +41,7 @@ const buildUIComponent = (mapInstance: any, options: any) => {
     mapInstance.floorControl = new FloorControl(set(options.floorControlOptions, 'mainColor', options.mainColor))
     mapInstance.addControl(mapInstance.floorControl, isString(options.floorControl) ? options.floorControl : undefined)
   }
-
+  console.log('lol je vais pas le faire : ', options.navigationControl)
   if (options.navigationControl) {
     mapInstance.navigationControl = new NavigationControl(options.navigationControlOptions)
     mapInstance.addControl(mapInstance.navigationControl, isString(options.navigationControl) ? options.navigationControl : undefined)
@@ -134,7 +134,7 @@ const createMap = (container: string | HTMLElement, options?: any) => {
 
     locale: 'en',
 
-    locationControl: true,
+    locationControl: false,
     locationControlOptions: {},
 
     mainColor: null,

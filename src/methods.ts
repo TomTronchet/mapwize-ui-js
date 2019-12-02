@@ -8,12 +8,13 @@ import { DefaultControl } from './control'
 
 const attachMethods = (mapInstance: any) => {
 
-  const onMapClick = (e: any): void => {
-    if (e.venue) {
-      mapInstance.centerOnVenue(e.venue)
-    }
-  }
-  mapInstance.on('mapwize:click', onMapClick)
+  // const onMapClick = (e: any): void => {
+  //   if (e.venue) {
+  //     console.log('je veux pas centrer sur la venue')
+  //     // mapInstance.centerOnVenue(e.venue)
+  //   }
+  // }
+  // mapInstance.on('mapwize:click', onMapClick)
 
   mapInstance.hasControl = (control: DefaultControl): boolean => {
     return control.isOnMap
@@ -220,7 +221,7 @@ const attachMethods = (mapInstance: any) => {
     mapInstance.headerManager.remove()
     mapInstance.footerManager.remove()
 
-    mapInstance.off('mapwize:click', onMapClick)
+    // mapInstance.off('mapwize:click', onMapClick)
     mapInstance.off('mapwize:directionstart', onDirectionStart)
     $(mapInstance.getContainer()).removeClass('mapwizeui')
 

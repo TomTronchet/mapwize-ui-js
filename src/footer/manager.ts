@@ -117,13 +117,15 @@ export class FooterManager {
   }
 
   private _onClick (e: any): void {
+    console.log('CANCER IS HERE');
     if (this._map.getVenue() && !this._map.headerManager.isInDirectionMode()) {
-      if (e.place) {
-        this.setSelected(set(e.place, 'objectClass', 'place'))
-      } else {
-        this.showVenue().catch(() => null)
-        this.setSelected(null)
-      }
+      console.log('Non je fé rien')
+      // if (e.place) {
+      //   this.setSelected(set(e.place, 'objectClass', 'place'))
+      // } else {
+      //   this.showVenue().catch(() => null)
+      //   this.setSelected(null)
+      // }
     }
   }
   private _onVenueEnter (e: any): void {
